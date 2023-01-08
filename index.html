@@ -5,163 +5,13 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <title>Responsive Popup</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/styles.css">
 
-  <title>Popup</title>
-  <style>
-    /* width */
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-}
-    .modal-content {
-      border-top: 2px solid red;
-      border-left: 1px solid red;
-      border-right: 1px solid red;
-      border-bottom: 4px solid red;
-    }
-    .btn-check:focus+.btn, .btn:focus,
-    .form-select:focus {
-      border-color: #00000000;
-      outline: 1px solid;
-      box-shadow: none;
-  }
-  .btn-check:active+.btn-primary:focus, .btn-check:checked+.btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus {
-    box-shadow: none;
-}
-
-    .title-head p {
-      text-align: center;
-      color: #054060;
-      padding-top: 5px;
-      font-weight: 500;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .radi label {
-      padding: 0px 15px;
-      font-size: 13px;
-    }
-    .radio-2 label {
-      padding: 0px 2px;
-      font-size: 12px;
-    }
-
-    .style-list {
-      list-style: none;
-
-    }
-
-    .border {
-      /* border: 1px solid black; */
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      border: none;
-    }
-
-    .hd-1 {
-      text-align: start;
-      /* border: 1px solid red; */
-      width: 150px;
-      padding: 3px 3px;
-
-    }
-
-    .sec-img {
-      text-align: end;
-      /* border: 1px solid rgb(0, 17, 255); */
-      width: 135px;
-      padding: 3px 3px;
-
-    }
-
-    .sec-text {
-      text-align: center;
-      /* border: 1px solid rgb(255, 0, 149); */
-      width: 100px;
-      padding: 3px 3px;
-    }
-
-    .btn-popups {
-      background-color: #054060;
-      color: white;
-    }
-
-    #form-label {
-      color: #054060;
-      font-weight: 500;
-    }
-
-    .text-col {
-      color: #054060;
-      font-size: 14px !important;
-    }
-
-    @media only screen and (max-width: 600px) {
-
-      .hd-1 {
-        text-align: start;
-        /* border: 1px solid red; */
-        width: 120px;
-        padding: 3px 3px;
-        font-size: 14px !important;
-
-      }
-      .radi label {
-        padding: 0px 3px;
-        font-size: 11px;
-      }
-      .sec-img {
-        text-align: end;
-        width: 120px;
-        padding: 3px 3px;
-      }
-
-      .sec-img img {
-        width: 14px !important;
-        height: 14px !important;
-      }
-
-      .sec-text {
-        text-align: start;
-        width: 70px;
-        padding: 3px 3px;
-        font-size: 14px;
-      }
-      .radio-2 label {
-      padding: 0px 2px;
-      font-size: 10px;
-    }
-    }
-    
-    @media (min-width: 576px) {
-        .modal-dialog {
-          max-width: 600px !important;
-        }
-      }
-      #popup-main{
-        margin: 0 auto;
-        background-color: #054060;
-      }
-  </style>
+  
 </head>
 
 <body>
@@ -238,11 +88,11 @@
                   <div class="col-md-12 border border border-0">
                     <span class="hd-1"> Placement Quality</span>
                     <span class="sec-img">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50 (1).png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/start_blank.png" alt="" width="20" height="20">
                     </span>
 
                     <span class="sec-text">Good</span>
@@ -250,11 +100,11 @@
                   <div class="col-md-12 border border-0 border">
                     <span class="hd-1"> Infrastucture</span>
                     <span class="sec-img">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50 (1).png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50 (1).png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/start_blank.png" alt="" width="20" height="20">
+                      <img src="/assets/img/start_blank.png" alt="" width="20" height="20">
 
                     </span>
 
@@ -263,11 +113,11 @@
                   <div class="col-md-12 border border-0 border">
                     <span class="hd-1"> Faculty Quality</span>
                     <span class="sec-img">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50 (1).png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/start_blank.png" alt="" width="20" height="20">
                     </span>
 
                     <span class="sec-text">Good</span>
@@ -275,11 +125,11 @@
                   <div class="col-md-12 border border-0 border">
                     <span class="hd-1"> Cumpus Life</span>
                     <span class="sec-img">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50 (1).png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/start_blank.png" alt="" width="20" height="20">
                     </span>
 
                     <span class="sec-text">Good</span>
@@ -287,11 +137,11 @@
                   <div class="col-md-12 border border-0 border">
                     <span class="hd-1"> Value of Money</span>
                     <span class="sec-img">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50 (1).png" alt="" width="20" height="20">
-                      <img src="/assets/img/icons8-star-50 (1).png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/star_filled.png" alt="" width="20" height="20">
+                      <img src="/assets/img/start_blank.png" alt="" width="20" height="20">
+                      <img src="/assets/img/start_blank.png" alt="" width="20" height="20">
                     </span>
 
                     <span class="sec-text">Bad</span>
@@ -302,37 +152,37 @@
               <div class="mb-3 col-md-12 radio-2">
                 <h5 class="form-label text-col">Select Review Parameters</h5>
                 <div class="row">
-                  <div class="col-3 col-sm-3 d-flex p-0">
+                  <div class="col-3 col-sm-3 d-flex align-items-center p-0">
                     <input type="checkbox" class="form-check-input me-2" id="pros" checked>
                     <label class="form-check-label" for="pros">Pros</label>
                   </div>
-                  <div class="col-2 col-sm-3 d-flex p-0">
+                  <div class="col-2 col-sm-3 d-flex align-items-center p-0">
                     <input type="checkbox" class="form-check-input me-2" id="cons" checked>
                     <label class="form-check-label" for="cons">Cons</label>
                   </div>
-                  <div class="col-4 col-sm-3 d-flex p-0">
+                  <div class="col-4 col-sm-3 d-flex align-items-center p-0">
                     <input type="checkbox" class="form-check-input me-2" id="placementQuality">
                     <label class="form-check-label" for="placementQuality">Placement Quality</label>
                   </div>
-                  <div class="col-3 col-sm-3 d-flex p-0">
+                  <div class="col-3 col-sm-3 d-flex align-items-center p-0">
                     <input type="checkbox" class="form-check-input me-2" id="Infrastucture">
                     <label class="form-check-label" for="Infrastucture">Infrastucture</label>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-3 col-sm-3  d-flex p-0">
+                  <div class="col-4 col-sm-3  d-flex align-items-center p-0">
                     <input type="checkbox" class="form-check-input me-2" id="facultyQuality">
                     <label class="form-check-label" for="facultyQuality">Faculty Quality</label>
                   </div>
-                  <div class="col-3 col-sm-3  d-flex p-0">
+                  <div class="col-4 col-sm-3  d-flex align-items-center p-0">
                     <input type="checkbox" class="form-check-input me-2" id="CampusLife">
                     <label class="form-check-label" for="CampusLife">Cumpus Life</label>
                   </div>
-                  <div class="col-3 col-sm-3  d-flex p-0">
+                  <div class="col-4 col-sm-3  d-flex align-items-center p-0">
                     <input type="checkbox" class="form-check-input me-2" id="valueofmoney">
                     <label class="form-check-label" for="valueofmoney">Value of Money</label>
                   </div>
-                  <div class="col-3 col-sm-3  d-flex p-0">
+                  <div class="col-4 col-sm-3  d-flex align-items-center p-0">
                     <input type="checkbox" class="form-check-input me-2" id="studentQuality">
                     <label class="form-check-label" for="studentQuality">Student Quality</label>
                   </div>
