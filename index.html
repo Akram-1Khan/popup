@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>Popup</title>
+  <style>
+    /* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+    .modal-content {
+      border-top: 2px solid red;
+      border-left: 1px solid red;
+      border-right: 1px solid red;
+      border-bottom: 4px solid red;
+    }
+    .btn-check:focus+.btn, .btn:focus,
+    .form-select:focus {
+      border-color: #00000000;
+      outline: 1px solid;
+      box-shadow: none;
+  }
+  .btn-check:active+.btn-primary:focus, .btn-check:checked+.btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+    .title-head p {
+      text-align: center;
+      color: #054060;
+      padding-top: 5px;
+      font-weight: 500;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .radi label {
+      padding: 0px 15px;
+      font-size: 13px;
+    }
+    .radio-2 label {
+      padding: 0px 2px;
+      font-size: 12px;
+    }
+
+    .style-list {
+      list-style: none;
+
+    }
+
+    .border {
+      /* border: 1px solid black; */
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      border: none;
+    }
+
+    .hd-1 {
+      text-align: start;
+      /* border: 1px solid red; */
+      width: 150px;
+      padding: 3px 3px;
+
+    }
+
+    .sec-img {
+      text-align: end;
+      /* border: 1px solid rgb(0, 17, 255); */
+      width: 135px;
+      padding: 3px 3px;
+
+    }
+
+    .sec-text {
+      text-align: center;
+      /* border: 1px solid rgb(255, 0, 149); */
+      width: 100px;
+      padding: 3px 3px;
+    }
+
+    .btn-popups {
+      background-color: #054060;
+      color: white;
+    }
+
+    #form-label {
+      color: #054060;
+      font-weight: 500;
+    }
+
+    .text-col {
+      color: #054060;
+      font-size: 14px !important;
+    }
+
+    @media only screen and (max-width: 600px) {
+
+      .hd-1 {
+        text-align: start;
+        /* border: 1px solid red; */
+        width: 120px;
+        padding: 3px 3px;
+        font-size: 14px !important;
+
+      }
+      .radi label {
+        padding: 0px 3px;
+        font-size: 11px;
+      }
+      .sec-img {
+        text-align: end;
+        width: 120px;
+        padding: 3px 3px;
+      }
+
+      .sec-img img {
+        width: 14px !important;
+        height: 14px !important;
+      }
+
+      .sec-text {
+        text-align: start;
+        width: 70px;
+        padding: 3px 3px;
+        font-size: 14px;
+      }
+      .radio-2 label {
+      padding: 0px 2px;
+      font-size: 10px;
+    }
+    }
+    
+    @media (min-width: 576px) {
+        .modal-dialog {
+          max-width: 600px !important;
+        }
+      }
+      #popup-main{
+        margin: 0 auto;
+        background-color: #054060;
+      }
+  </style>
+</head>
+
+<body>
+  
+
+  <!-- Scrollable modal -->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="popup-main">
+    Add Your Rating
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" id="border-head">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Add Your <span style="color: red;"> Rating & Review</span>
+          </h5>
+         <div>
+          <button type="button" class="btn fw-bolder" aria-label="expend"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  fill="currentColor" class="bi bi-arrows-angle-expand" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z"/>
+          </svg></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+
+              <div class="mb-3 col-md-6 title-head">
+                <p> Are you rating & Reviewing</p>
+              </div>
+              <div class="mb-3 col-md-6">
+                <select class="form-select" aria-label="Rating & Reviews">
+                  <option selected value="collage">College</option>
+                  <option value="hospital">Hospital</option>
+                  <option value="hotel">Hotel</option>
+                  <option value="mall">Mall</option>
+                </select>
+              </div>
+              <div class="mb-3 col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <select class="form-select" aria-label="Choose University Name">
+                  <option selected value="amityUniversity">Amity Universty</option>
+                  <option value="Galgotias">Galgotias University</option>
+                  <option value="DU">Delhi University</option>
+                  <option value="JNU">Jawaharlal Nehru University.</option>
+                </select>
+              </div>
+              <div class="mb-3 col-md-6">
+                <label for="exampleInputPassword1" class="form-label">Location</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected value="Noida">Noida</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Meerut">Meerut</option>
+                  <option value="Lucknow">Lucknow</option>
+                </select>
+              </div>
+              <div class="mb-3 col-md-12">
+                <h6 class="fs-small" style="color: #054060;">How You are Associated with Amity Universty?</h6>
+              </div>
+              <div class="mb-3 col-md-12 radi">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="currentStudent">
+                <label class="form-check-label" for="currentStudent">Current Student</label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="Alumni">
+                <label class="form-check-label" for="Alumni">Alumni</label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="campusRecuruiment">
+                <label class="form-check-label" for="campusRecuruiment">Campus Recuruiment</label>
+              </div>
+              <div class="container">
+                <div class="row py-4">
+                  <hr>
+                  <div class="col-md-12 border border border-0">
+                    <span class="hd-1"> Placement Quality</span>
+                    <span class="sec-img">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50 (1).png" alt="" width="20" height="20">
+                    </span>
+
+                    <span class="sec-text">Good</span>
+                  </div>
+                  <div class="col-md-12 border border-0 border">
+                    <span class="hd-1"> Infrastucture</span>
+                    <span class="sec-img">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50 (1).png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50 (1).png" alt="" width="20" height="20">
+
+                    </span>
+
+                    <span class="sec-text">Bad</span>
+                  </div>
+                  <div class="col-md-12 border border-0 border">
+                    <span class="hd-1"> Faculty Quality</span>
+                    <span class="sec-img">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50 (1).png" alt="" width="20" height="20">
+                    </span>
+
+                    <span class="sec-text">Good</span>
+                  </div>
+                  <div class="col-md-12 border border-0 border">
+                    <span class="hd-1"> Cumpus Life</span>
+                    <span class="sec-img">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50 (1).png" alt="" width="20" height="20">
+                    </span>
+
+                    <span class="sec-text">Good</span>
+                  </div>
+                  <div class="col-md-12 border border-0 border">
+                    <span class="hd-1"> Value of Money</span>
+                    <span class="sec-img">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50.png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50 (1).png" alt="" width="20" height="20">
+                      <img src="/assets/img/icons8-star-50 (1).png" alt="" width="20" height="20">
+                    </span>
+
+                    <span class="sec-text">Bad</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3 col-md-12 radio-2">
+                <h5 class="form-label text-col">Select Review Parameters</h5>
+                <div class="row">
+                  <div class="col-3 col-sm-3 d-flex p-0">
+                    <input type="checkbox" class="form-check-input me-2" id="pros" checked>
+                    <label class="form-check-label" for="pros">Pros</label>
+                  </div>
+                  <div class="col-2 col-sm-3 d-flex p-0">
+                    <input type="checkbox" class="form-check-input me-2" id="cons" checked>
+                    <label class="form-check-label" for="cons">Cons</label>
+                  </div>
+                  <div class="col-4 col-sm-3 d-flex p-0">
+                    <input type="checkbox" class="form-check-input me-2" id="placementQuality">
+                    <label class="form-check-label" for="placementQuality">Placement Quality</label>
+                  </div>
+                  <div class="col-3 col-sm-3 d-flex p-0">
+                    <input type="checkbox" class="form-check-input me-2" id="Infrastucture">
+                    <label class="form-check-label" for="Infrastucture">Infrastucture</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3 col-sm-3  d-flex p-0">
+                    <input type="checkbox" class="form-check-input me-2" id="facultyQuality">
+                    <label class="form-check-label" for="facultyQuality">Faculty Quality</label>
+                  </div>
+                  <div class="col-3 col-sm-3  d-flex p-0">
+                    <input type="checkbox" class="form-check-input me-2" id="CampusLife">
+                    <label class="form-check-label" for="CampusLife">Cumpus Life</label>
+                  </div>
+                  <div class="col-3 col-sm-3  d-flex p-0">
+                    <input type="checkbox" class="form-check-input me-2" id="valueofmoney">
+                    <label class="form-check-label" for="valueofmoney">Value of Money</label>
+                  </div>
+                  <div class="col-3 col-sm-3  d-flex p-0">
+                    <input type="checkbox" class="form-check-input me-2" id="studentQuality">
+                    <label class="form-check-label" for="studentQuality">Student Quality</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3 col-md-12 position-relative">
+                <label for="prosTextarea" class="form-label">Pros</label>
+                <textarea class="form-control" id="prosTextarea" placeholder="Write someting about Pros" rows="2"></textarea>
+                <span class="position-absolute top-50" style="right: 4%;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="mb-3 col-md-12  position-relative">
+                <label for="consTextarea" class="form-label">Cons</label>
+                <textarea class="form-control" id="consTextarea" placeholder="Write someting about Cons"
+                  rows="2"></textarea>
+                  <span class="position-absolute top-50" style="right: 4%;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                      <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                    </svg>
+                  </span>
+              </div>
+
+              <div class="mb-3 col-md-12">
+                <label for="" class="form-label">Designation</label>
+                <input class="form-control" type="text" id="formFile" placeholder="Your Designation">
+              </div>
+              <div class="mb-3 col-md-6">
+                <label for="" class="form-label">Funcitions</label>
+                <input class="form-control" type="text" id="formFile" placeholder="Funcitions">
+              </div>
+              <div class="mb-3 col-md-6">
+                <label for="" class="form-label">Department</label>
+                <input class="form-control" type="text" id="formFile" placeholder="Department">
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="col d-flex">
+                    <input type="checkbox" class="form-check-input me-2" id="anonymous">
+                    <label class="form-check-label" for="anonymous">Keep This Rating & Reviews as Anonymous</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+          <button type="button" class="btn  btn-popups px-5 text-white" data-bs-dismiss="modal">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ 
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  
+</body>
+
+</html>
